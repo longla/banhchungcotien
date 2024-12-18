@@ -9,20 +9,46 @@
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
       body {
         font-family: "Inter", sans-serif;
+        padding: 4%;
+      }
+      .menu-item {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-center p-8">
+  <body class="bg-gray-100 text-center">
     <h1 class="text-4xl font-bold text-gray-800">
       Chào Mừng Đến Với Bánh Chưng Cô Tiên
     </h1>
-    <p class="text-lg text-gray-700 mt-4">
-      Đặc sản bánh chưng thơm ngon, truyền thống, chuẩn vị quê nhà.
-    </p>
     <a
       href="tel:6572726537"
       class="mt-6 inline-block px-6 py-3 text-white bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600"
-      >Gọi Đặt Hàng: 657-272-6537</a
+      >📞 Gọi Đặt Hàng: 657-272-6537</a
     >
+    <p class="text-lg text-gray-700 mt-4">
+      Bánh chưng làm tại quận Cam chuẩn vị quê nhà.
+    </p>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=8113+W+Cerritos+Ave,+Stanton,+CA+90680"
+      target="_blank"
+      class="text-lg text-gray-700 mt-2 block underline"
+    >
+      📍 Địa chỉ pick up: 8113 W Cerritos Ave, Stanton, CA 90680
+    </a>
+    <div class="menu-item text-lg text-gray-700 mt-2">
+      <span>🟩</span><span>Bánh nhỏ:</span><span>3$</span>
+    </div>
+    <div class="menu-item text-lg text-gray-700 mt-2">
+      <span>🟩🟩</span><span>Bánh trung:</span><span>10$</span>
+    </div>
+    <div class="menu-item text-lg text-gray-700 mt-2">
+      <span>🟩🟩🟩</span><span>Bánh lớn:</span><span>20$</span>
+    </div>
+    <p class="text-red-600 font-semibold mt-4">
+      ⚠️ Làm ơn gọi đặt bánh trước 2 ngày, pick up only.
+    </p>
   </body>
 </html>
