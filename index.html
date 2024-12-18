@@ -11,11 +11,24 @@
         font-family: "Inter", sans-serif;
         padding: 4%;
       }
-      .menu-item {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
+      details summary {
+        text-align: left;
+        display: flex !important;
         align-items: center;
+        justify-content: space-between;
+      }
+      details summary > div {
+        display: flex;
+        align-items: center;
+        gap: 1.25rem;
+      }
+      /* Additional reset for summary to prevent browser-specific styling */
+      details summary {
+        list-style: none;
+      }
+      details summary::-webkit-details-marker,
+      details summary::marker {
+        display: none;
       }
     </style>
   </head>
@@ -23,7 +36,7 @@
     <h1 class="text-4xl font-bold text-gray-800">
       Chào Mừng Đến Với Bánh Chưng Cô Tiên
     </h1>
-    <p class="text-lg text-gray-700 mt-4">
+    <p class="text-2xl text-gray-700 mt-4">
       Bánh chưng làm tại quận Cam chuẩn vị quê nhà.
     </p>
     <a
@@ -32,16 +45,8 @@
       >📞 Gọi Đặt Hàng: 657-272-6537</a
     >
 
-    <a
-      href="https://www.google.com/maps/search/?api=1&query=8113+W+Cerritos+Ave,+Stanton,+CA+90680"
-      target="_blank"
-      class="text-lg text-gray-700 my-6 block underline"
-    >
-      📍 Địa chỉ pick up: 8113 W Cerritos Ave, Stanton, CA 90680
-    </a>
-
-    <div>
-      <details class="bg-white rounded-lg border border-gray-200">
+    <div class="mt-6">
+      <details class="bg-white rounded-lg border border-gray-200 my-2">
         <summary
           class="flex items-center justify-between px-4 py-2 text-lg font-medium text-gray-900 bg-gray-50 rounded-t-lg cursor-pointer"
         >
@@ -80,7 +85,7 @@
           </ul>
         </div>
       </details>
-      <details class="bg-white rounded-lg border border-gray-200">
+      <details class="bg-white rounded-lg border border-gray-200 my-2">
         <summary
           class="flex items-center justify-between px-4 py-2 text-lg font-medium text-gray-900 bg-gray-50 rounded-t-lg cursor-pointer"
         >
@@ -118,7 +123,7 @@
           </ul>
         </div>
       </details>
-      <details class="bg-white rounded-lg border border-gray-200">
+      <details class="bg-white rounded-lg border border-gray-200 my-2">
         <summary
           class="flex items-center justify-between px-4 py-2 text-lg font-medium text-gray-900 bg-gray-50 rounded-t-lg cursor-pointer"
         >
@@ -158,8 +163,15 @@
       </details>
     </div>
 
-    <p class="text-red-600 font-semibold mt-4">
-      ⚠️ Làm ơn gọi đặt bánh trước 2 ngày, pick up only.
+    <p class="text-red-600 font-semibold mt-6">
+      Vui lòng gọi đặt bánh trước 2 ngày, pick up only.
     </p>
+    <a
+      href="https://www.google.com/maps/search/?api=1&query=8113+W+Cerritos+Ave,+Stanton,+CA+90680"
+      target="_blank"
+      class="text-lg text-gray-700 my-6 block underline"
+    >
+      📍 Địa chỉ pick up: 8113 W Cerritos Ave, Stanton, CA 90680
+    </a>
   </body>
 </html>
