@@ -43,7 +43,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-JJ2JYJGKCP");
+      gtag("config", "G-JJ2JYJGKCP", { debug_mode: true });
     </script>
     <!-- Meta Pixel Code -->
     <script>
@@ -91,7 +91,7 @@
     </p>
     <a
       href="tel:6572726533"
-      onclick="fbq('track', 'Purchase')"
+      onclick="fbq('track', 'Purchase');gtag('event', 'phone_click', { event_category: 'Contact', event_label: 'Phone Call', value: 1 })"
       class="mt-6 inline-block px-6 py-3 text-white bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600"
       >📞 Gọi Đặt Bánh: 657-272-6533</a
     >
