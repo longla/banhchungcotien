@@ -57,6 +57,17 @@
       details summary::marker {
         display: none;
       }
+      .chat-widget {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        right: 20px; /* Adjust as needed */
+        z-index: 1000; /* Ensure it's above other elements */
+      }
+
+      .chat-widget img {
+        width: 50px; /* Adjust size */
+        height: 50px; /* Maintain aspect ratio */
+      }
     </style>
     <!-- Google tag (gtag.js) -->
     <script
@@ -269,5 +280,14 @@
     >
       📍 Địa chỉ pick up: 8113 W Cerritos Ave, Stanton, CA 90680
     </a>
+    <!--Chat-->
+    <div class="chat-widget">
+      <a href="https://m.me/61570225125522" target="_blank">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"
+          alt="Chat with us"
+        />
+      </a>
+    </div>
   </body>
 </html>
