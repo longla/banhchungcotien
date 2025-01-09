@@ -1,58 +1,32 @@
 "use client";
 
-import React from "react";
+import useAnalytics from "../ultilities/analystic";
 const HomePage = () => {
   // Google Analytics and Meta Pixel Code initialization
-  React.useEffect(() => {
-    // Google Analytics
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      window.dataLayer.push(arguments);
+  // Initialize analytics
+  useAnalytics();
+  const handlePhoneClick = () => {
+    if (typeof window !== "undefined") {
+      if (window.fbq) {
+        window.fbq("track", "Purchase");
+      }
+      if (window.gtag) {
+        window.gtag("event", "phone_click", {
+          event_category: "Contact",
+          event_label: "Phone Call",
+          value: 1,
+        });
+      }
     }
-    gtag("js", new Date());
-    gtag("config", "G-JJ2JYJGKCP");
+  };
 
-    // Meta Pixel Code
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod
-          ? n.callMethod.apply(n, arguments)
-          : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = "2.0";
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(
-      window,
-      document,
-      "script",
-      "https://connect.facebook.net/en_US/fbevents.js"
-    );
-    fbq("init", "1312231683111702");
-    fbq("track", "PageView");
-
-    // Clarity Code
-    (function (c, l, a, r, i, t, y) {
-      c[a] =
-        c[a] ||
-        function () {
-          (c[a].q = c[a].q || []).push(arguments);
-        };
-      t = l.createElement(r);
-      t.async = 1;
-      t.src = "https://www.clarity.ms/tag/" + i;
-      y = l.getElementsByTagName(r)[0];
-      y.parentNode.insertBefore(t, y);
-    })(window, document, "clarity", "script", "pgqdvptg6j");
-  }, []);
+  const findLocationClick = () => {
+    if (typeof window !== "undefined") {
+      if (window.fbq) {
+        window.fbq("track", "FindLocation");
+      }
+    }
+  };
 
   return (
     <div className="bg-gray-100 text-center p-[4%]">
@@ -64,14 +38,7 @@ const HomePage = () => {
       </p>
       <a
         href="tel:6572726533"
-        onClick={() => {
-          fbq("track", "Purchase");
-          gtag("event", "phone_click", {
-            event_category: "Contact",
-            event_label: "Phone Call",
-            value: 1,
-          });
-        }}
+        onClick={handlePhoneClick}
         className="mt-6 inline-block px-6 py-3 text-white font-bold bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600 active:scale-95 active:bg-red-700 shadow-lg"
       >
         📞 Gọi Đặt Bánh: 657-272-6533
@@ -176,7 +143,7 @@ const HomePage = () => {
         href="https://www.google.com/maps/search/?api=1&query=8101+W+Cerritos+Ave,+Stanton,+CA+90680"
         target="_blank"
         className="text-lg text-gray-700 my-3 block underline"
-        onClick={() => fbq("track", "FindLocation")}
+        onClick={findLocationClick}
       >
         📍 Địa chỉ: 8101 W Cerritos Ave, Stanton, CA 90680
       </a>

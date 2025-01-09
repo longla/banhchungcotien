@@ -40,14 +40,12 @@ async function getPostData(slug: string) {
   }
 }
 
+type Params = Promise<{ slug }>;
 // Main Blog Post Page component
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function BlogPostPage({ params }: { params: Params }) {
+  const { slug } = await params;
   // Ensure params.slug is available and use it directly
-  const postData = await getPostData(params.slug);
+  const postData = await getPostData(slug);
 
   if (!postData) {
     notFound(); // Handles 404 by invoking next/navigation's notFound
