@@ -37,9 +37,11 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
         />
       </head>
       <body>{children}</body>

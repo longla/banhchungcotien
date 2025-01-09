@@ -30,11 +30,9 @@ const HomePage = () => {
 
   return (
     <div className="bg-gray-100 text-center p-[4%]">
-      <h1 className="text-2xl font-bold text-gray-800">
-        Chào Mừng Đến Với Lò Bánh Chưng Cô Tiên
-      </h1>
+      <h1 className="text-2xl font-bold text-gray-800">Bánh Chưng Cô Tiên</h1>
       <p className="text-xl text-gray-700 mt-4">
-        Bánh chưng làm tại quận Cam chuẩn vị quê nhà 🏡
+        Bánh chưng làm tại California chuẩn vị quê nhà 🏡
       </p>
       <a
         href="tel:6572726533"
