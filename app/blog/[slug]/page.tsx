@@ -25,6 +25,7 @@ async function getPostData(slug: string) {
   try {
     const fileContents = await fs.readFile(fullPath, "utf8");
     const matterResult = matter(fileContents);
+    console.log(matterResult.content);
     return {
       slug,
       frontmatter: matterResult.data as {

@@ -15,10 +15,7 @@ const BlogPost: React.FC<BlogPostProps> = ({ frontmatter, content }) => {
   return (
     <div>
       <h2>{frontmatter.title}</h2>
-      <p>{new Date(frontmatter.date).toLocaleDateString()}</p>{" "}
-      {/* Format date */}
-      {frontmatter.description && <p>{frontmatter.description}</p>}{" "}
-      {/* Display description if available */}
+      <p>{new Date(frontmatter.date).toLocaleDateString()}</p>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     </div>
   );
