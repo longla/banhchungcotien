@@ -9,7 +9,11 @@ export default async function BlogLayout({
   return (
     <div className="px-[4%]">
       <div className="py-2">
-        <Link href="/">Bánh Chưng Cô Tiên</Link>
+        <Link href="/">
+          <span className="text-2xl font-bold text-gray-800">
+            Bánh Chưng Cô Tiên
+          </span>
+        </Link>
       </div>
 
       <main>{children}</main>

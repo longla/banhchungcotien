@@ -13,8 +13,10 @@ export async function getAllPosts() {
       const fullPath = path.join(postsDirectory, filename);
       const fileContents = await fs.readFile(fullPath, "utf8");
       const matterResult = matter(fileContents);
+      const imagePath = `/posts/${slug}/cover.jpeg`;
       return {
         slug,
+        imagePath,
         frontmatter: matterResult.data as {
           title: string;
           date: string;
