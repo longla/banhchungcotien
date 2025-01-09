@@ -46,6 +46,7 @@ export default async function BlogPostPage({
 }: {
   params: { slug: string };
 }) {
+  // Ensure params.slug is available and use it directly
   const postData = await getPostData(params.slug);
 
   if (!postData) {
