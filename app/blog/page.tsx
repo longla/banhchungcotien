@@ -20,10 +20,7 @@ export default async function BlogList() {
               width={150} // Adjust width and height as needed
               height={150}
             />
-            <h2>
-              {post.frontmatter.title} |{" "}
-              {new Date(post.frontmatter.date).toLocaleDateString()}{" "}
-            </h2>
+            <h1>{post.frontmatter.title}</h1>
             {post.frontmatter.description && (
               <p>{post.frontmatter.description}</p>
             )}

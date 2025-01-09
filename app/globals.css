@@ -6,6 +6,20 @@
 
 body {
   font-family: "Playfair Display", sans-serif;
+  line-height: 1.75; /* Adjust as needed */
+  font-size: 1.25rem; /* Adjust as needed */
+}
+
+h1 {
+  @apply text-2xl font-bold my-3;
+}
+
+h2 {
+  @apply text-xl font-semibold my-2;
+}
+
+h3 {
+  @apply text-lg font-semibold my-2;
 }
 
 details summary {
