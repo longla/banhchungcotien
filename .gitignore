@@ -1,0 +1,48 @@
+
+.codegpt
+# Next.js
+.next/
+node_modules/
+*.log
+.DS_Store
+
+# Production
+out/
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+
+# Vercel
+vercel.json
+.vercel/
+
+# Test output
+coverage/
+
+# Editor folders
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.userprefs*
+
+# Mac OS
+.DS_Store
+
+# Yarn
+yarn-error.log
+.pnp-debug.log*
+
+# Build artifacts
+build/
+dist/
+
+# Package manager lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Image optimization
+/public/images/generated/ # Assuming you're using image optimization that outputs to this folder.  Adjust as needed.
