@@ -14,7 +14,6 @@ interface BlogPostProps {
 const BlogPost: React.FC<BlogPostProps> = ({ frontmatter, content }) => {
   return (
     <div>
-      <h2>{frontmatter.title}</h2>
       <ReactMarkdown remarkPlugins={[remarkGfm]}>{content}</ReactMarkdown>
     </div>
   );
