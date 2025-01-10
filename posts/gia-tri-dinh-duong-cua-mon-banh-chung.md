@@ -1,6 +1,6 @@
 ---
 title: Giá Trị Dinh Dưỡng Của Món Bánh Chưng
-date: 2024-04-26
+date: 2025-01-01
 description: Khám phá giá trị dinh dưỡng phong phú của Bánh Chưng, một món ăn truyền thống của Việt Nam được thưởng thức trong dịp Tết Nguyên Đán, và cách món ăn này đóng góp vào một chế độ ăn uống cân bằng.
 ---
 
