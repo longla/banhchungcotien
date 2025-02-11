@@ -138,12 +138,12 @@ const HomePage = () => {
       </p>
       <p className="text-red-600 font-semibold mt-4">📦 Nhận bỏ bánh giá sỉ</p>
       <a
-        href="https://www.google.com/maps/search/?api=1&query=8101+W+Cerritos+Ave,+Stanton,+CA+90680"
+        href="https://www.google.com/maps/search/?api=1&query=8128+W+Cerritos+Ave,+Stanton,+CA+90680"
         target="_blank"
         className="text-lg text-gray-700 my-3 block underline"
         onClick={findLocationClick}
       >
-        📍 Địa chỉ: 8101 W Cerritos Ave, Stanton, CA 90680
+        📍 Địa chỉ: 8128 W Cerritos Ave, Stanton, CA 90680
       </a>
       <div>
         <p className="text-gray-700">Hướng Dẫn Đậu Xe</p>
