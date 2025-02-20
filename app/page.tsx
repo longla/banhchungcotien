@@ -155,7 +155,10 @@ const HomePage = () => {
       </a>
       <div>
         <p className="text-gray-700">Hướng Dẫn Đậu Xe</p>
-        <div className="image-container max-w-[600px] max-h-[600px] mx-auto my-2">
+        <div
+          onClick={handleMapImageClick}
+          className="image-container max-w-[600px] max-h-[600px] mx-auto my-2"
+        >
           <img
             src="/huong dan dau xe.jpg"
             alt="Parking Guide"
@@ -172,7 +175,7 @@ const HomePage = () => {
         <a href="https://m.me/61570225125522" target="_blank" rel="noreferrer">
           <div className="relative flex items-center justify-center">
             <div className="absolute w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 animate-halo"></div>
-            <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg flex items-center justify-center hover:scale-110 hover:shadow-2xl transition transform duration-300 ease-in-out onClick={handleMapImageClick}">
+            <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg flex items-center justify-center hover:scale-110 hover:shadow-2xl transition transform duration-300 ease-in-out">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"
                 alt="Messenger Icon"
