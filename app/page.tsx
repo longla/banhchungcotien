@@ -28,6 +28,14 @@ const HomePage = () => {
     }
   };
 
+  const handleMapImageClick = () => {
+    window.open(
+      "https://www.google.com/maps/search/?api=1&query=8128+W+Cerritos+Ave,+Stanton,+CA+90680",
+      "_blank"
+    );
+    findLocationClick(); // Keep the tracking call if needed
+  };
+
   return (
     <div className="bg-gray-100 text-center p-[4%]">
       <h1 className="text-2xl font-bold text-gray-800">Bánh Chưng Cô Tiên</h1>
@@ -164,7 +172,7 @@ const HomePage = () => {
         <a href="https://m.me/61570225125522" target="_blank" rel="noreferrer">
           <div className="relative flex items-center justify-center">
             <div className="absolute w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 animate-halo"></div>
-            <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg flex items-center justify-center hover:scale-110 hover:shadow-2xl transition transform duration-300 ease-in-out">
+            <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg flex items-center justify-center hover:scale-110 hover:shadow-2xl transition transform duration-300 ease-in-out onClick={handleMapImageClick}">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"
                 alt="Messenger Icon"
