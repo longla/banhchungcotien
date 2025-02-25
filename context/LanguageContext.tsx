@@ -14,7 +14,7 @@ const translations = {
   vi: {
     'title': 'Bánh Chưng Cô Tiên',
     'subtitle': 'Bánh chưng làm tại California chuẩn vị quê nhà 🏡',
-    'callButton': '📞 Gọi Đặt Bánh: 657-272-6533',
+    'callButton': '📞 Gọi Đặt Bánh: <span class="number">657-272-6533</span>',
     'orderNote': 'Vui lòng gọi đặt bánh trước, pick up only.',
     'wholesaleNote': '📦 Nhận bỏ bánh giá sỉ',
     'address': '📍 Địa chỉ: 8128 W Cerritos Ave, Stanton, CA 90680',
@@ -37,7 +37,7 @@ const translations = {
   en: {
     'title': 'Banh Chung Co Tien',
     'subtitle': 'Authentic Vietnamese rice cakes made in California 🏡',
-    'callButton': '📞 Order Now: 657-272-6533',
+    'callButton': '📞 Order Now: <span class="number">657-272-6533</span>',
     'orderNote': 'Please call to place orders in advance, pick up only.',
     'wholesaleNote': '📦 Wholesale orders available',
     'address': '📍 Address: 8128 W Cerritos Ave, Stanton, CA 90680',

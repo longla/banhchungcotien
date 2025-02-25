@@ -82,9 +82,8 @@ const HomePage = () => {
         href="tel:6572726533"
         onClick={handlePhoneClick}
         className="mt-6 inline-block px-6 py-3 text-white font-bold bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600 active:scale-95 active:bg-red-700 shadow-lg"
-      >
-        {t('callButton')}
-      </a>
+        dangerouslySetInnerHTML={{ __html: t('callButton') }}
+      ></a>
       <div className="mt-6">
         {Object.entries(sizeContent).map(([size, { key, price, content }]) => (
           <details
@@ -94,7 +93,7 @@ const HomePage = () => {
             <summary className="flex items-center justify-between px-4 py-3 text-lg font-medium text-gray-900 bg-gray-50 rounded-t-lg cursor-pointer">
               {t('size')} {t(key)}
               <div className="flex items-center gap-5">
-                <span>{price}</span>
+                <span className="font-['Lato'] font-bold text-base">{price}</span>
                 <svg
                   className="w-4 h-4"
                   fill="currentColor"
@@ -112,8 +111,7 @@ const HomePage = () => {
             <div className="px-4 py-2 border-t border-gray-200">
               <ul className="list-inside text-left space-y-2">
                 {content.map((item, idx) => (
-                  <li key={idx}>
-                    {t(item.key)}
+                  <li key={idx} dangerouslySetInnerHTML={{ __html: t(item.key) }}>
                   </li>
                 ))}
               </ul>
@@ -130,9 +128,8 @@ const HomePage = () => {
         target="_blank"
         className="text-lg text-gray-700 my-3 block underline"
         onClick={findLocationClick}
-      >
-        {t('address')}
-      </a>
+        dangerouslySetInnerHTML={{ __html: t('address') }}
+      ></a>
       <div>
         <p className="text-gray-700">{t('parkingGuide')}</p>
         <div
@@ -164,7 +161,7 @@ const HomePage = () => {
               />
             </div>
           </div>
-          <p className="text-sm font-semibold text-gray-800">{t('messengerChat')}</p>
+          <p className="text-sm font-semibold text-gray-800" dangerouslySetInnerHTML={{ __html: t('messengerChat') }}></p>
         </a>
       </div>
     </div>
