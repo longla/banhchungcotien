@@ -63,4 +63,20 @@ details summary::marker {
   .animate-halo {
     animation: halo 2s infinite;
   }
+  
+  /* Language Switcher Animation */
+  @keyframes language-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .language-fade {
+    animation: language-fade 0.3s ease-out forwards;
+  }
 }
