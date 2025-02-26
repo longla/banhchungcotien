@@ -8,12 +8,14 @@
     "test:all": "jest",
     "test:watch": "jest --watch",
     "test:analytics": "jest analytics",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
     "gray-matter": "^4.0.3",
     "next": "^15.1.4",
+    "next-sitemap": "^4.2.3",
     "postcss": "^8.4.49",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
@@ -37,6 +39,6 @@
   },
   "overrides": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0" 
+    "react-dom": "^19.0.0"
   }
 }

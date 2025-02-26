@@ -1,4 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
 
+# Host
+Host: https://banhchungcotien.com
+
+# Sitemaps
 Sitemap: https://banhchungcotien.com/sitemap.xml
