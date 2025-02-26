@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import LanguageSwitcher from "../../components/LanguageSwitcher";
 import { useLanguage } from "../../context/LanguageContext";
 import useAnalytics from "../../ultilities/analystic";
@@ -136,11 +137,15 @@ export default function HomePage() {
           onClick={handleMapImageClick}
           className="image-container max-w-[600px] max-h-[600px] mx-auto my-2"
         >
-          <img
+          <Image
             src="/huong-dan-dau-xe.webp"
             alt="Parking Guide"
             id="guideImage"
             className="cursor-pointer"
+            width={500}
+            priority
+            layout="responsive"
+            height={500}
           />
         </div>
         <div className="px-[4%] mt-6">
