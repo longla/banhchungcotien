@@ -8,8 +8,7 @@
     "test:all": "jest",
     "test:watch": "jest --watch",
     "test:analytics": "jest analytics",
-    "test:coverage": "jest --coverage",
-    "prepare": "husky install"
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
