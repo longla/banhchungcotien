@@ -29,6 +29,7 @@
     "@types/jest": "^29.5.12",
     "@types/node": "22.10.5",
     "@types/react": "19.0.3",
+    "imagemin-cli": "^8.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.1.2",
