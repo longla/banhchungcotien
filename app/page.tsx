@@ -1,8 +1,9 @@
 "use client";
 
-import useAnalytics from "../ultilities/analystic";
+import Image from "next/image";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useLanguage } from "../context/LanguageContext";
+import useAnalytics from "../ultilities/analystic";
 
 export default function HomePage() {
   // Initialize analytics
@@ -41,48 +42,46 @@ export default function HomePage() {
   };
 
   const sizeContent = {
-    "Nhỏ": {
-      key: 'sizeSmall',
+    Nhỏ: {
+      key: "sizeSmall",
       price: "$3.00",
       content: [
-        { key: 'smallSize1' },
-        { key: 'smallSize2' },
-        { key: 'smallSize3' }
-      ]
+        { key: "smallSize1" },
+        { key: "smallSize2" },
+        { key: "smallSize3" },
+      ],
     },
-    "Trung": {
-      key: 'sizeMedium',
+    Trung: {
+      key: "sizeMedium",
       price: "$10.00",
       content: [
-        { key: 'mediumSize1' },
-        { key: 'mediumSize2' },
-        { key: 'mediumSize3' }
-      ]
+        { key: "mediumSize1" },
+        { key: "mediumSize2" },
+        { key: "mediumSize3" },
+      ],
     },
-    "Lớn": {
-      key: 'sizeLarge',
+    Lớn: {
+      key: "sizeLarge",
       price: "$20.00",
       content: [
-        { key: 'largeSize1' },
-        { key: 'largeSize2' },
-        { key: 'largeSize3' }
-      ]
-    }
+        { key: "largeSize1" },
+        { key: "largeSize2" },
+        { key: "largeSize3" },
+      ],
+    },
   };
 
   return (
     <div className="bg-gray-100 text-center p-[4%] relative">
-      <h1 className="text-2xl font-bold text-gray-800">{t('title')}</h1>
+      <h1 className="text-2xl font-bold text-gray-800">{t("title")}</h1>
       <LanguageSwitcher />
-      
-      <p className="text-xl text-gray-700 mt-4">
-        {t('subtitle')}
-      </p>
+
+      <p className="text-xl text-gray-700 mt-4">{t("subtitle")}</p>
       <a
         href="tel:6572726533"
         onClick={handlePhoneClick}
         className="mt-6 inline-block px-6 py-3 text-white font-bold bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600 active:scale-95 active:bg-red-700 shadow-lg"
-        dangerouslySetInnerHTML={{ __html: t('callButton') }}
+        dangerouslySetInnerHTML={{ __html: t("callButton") }}
       ></a>
       <div className="mt-6">
         {Object.entries(sizeContent).map(([size, { key, price, content }]) => (
@@ -91,9 +90,11 @@ export default function HomePage() {
             className="bg-white rounded-lg border border-gray-200 my-2"
           >
             <summary className="flex items-center justify-between px-4 py-3 text-lg font-medium text-gray-900 bg-gray-50 rounded-t-lg cursor-pointer">
-              {t('size')} {t(key)}
+              {t("size")} {t(key)}
               <div className="flex items-center gap-5">
-                <span className="font-['Lato'] font-bold text-base">{price}</span>
+                <span className="font-['Lato'] font-bold text-base">
+                  {price}
+                </span>
                 <svg
                   className="w-4 h-4"
                   fill="currentColor"
@@ -111,36 +112,40 @@ export default function HomePage() {
             <div className="px-4 py-2 border-t border-gray-200">
               <ul className="list-inside text-left space-y-2">
                 {content.map((item, idx) => (
-                  <li key={idx} dangerouslySetInnerHTML={{ __html: t(item.key) }}>
-                  </li>
+                  <li
+                    key={idx}
+                    dangerouslySetInnerHTML={{ __html: t(item.key) }}
+                  ></li>
                 ))}
               </ul>
             </div>
           </details>
         ))}
       </div>
-      <p className="text-red-600 font-semibold mt-4">
-        {t('orderNote')}
-      </p>
-      <p className="text-red-600 font-semibold mt-4">{t('wholesaleNote')}</p>
+      <p className="text-red-600 font-semibold mt-4">{t("orderNote")}</p>
+      <p className="text-red-600 font-semibold mt-4">{t("wholesaleNote")}</p>
       <a
         href="https://www.google.com/maps/search/?api=1&query=8128+W+Cerritos+Ave,+Stanton,+CA+90680"
         target="_blank"
         className="text-lg text-gray-700 my-3 block underline"
         onClick={findLocationClick}
-        dangerouslySetInnerHTML={{ __html: t('address') }}
+        dangerouslySetInnerHTML={{ __html: t("address") }}
       ></a>
       <div>
-        <p className="text-gray-700">{t('parkingGuide')}</p>
+        <p className="text-gray-700">{t("parkingGuide")}</p>
         <div
           onClick={handleMapImageClick}
           className="image-container max-w-[600px] max-h-[600px] mx-auto my-2"
         >
-          <img
+          <Image
             src="/huong dan dau xe.jpg"
             alt="Parking Guide"
             id="guideImage"
             className="cursor-pointer"
+            width={500}
+            priority
+            layout="responsive"
+            height={500}
           />
         </div>
         <div className="px-[4%] mt-6">
@@ -161,7 +166,10 @@ export default function HomePage() {
               />
             </div>
           </div>
-          <p className="text-sm font-semibold text-gray-800" dangerouslySetInnerHTML={{ __html: t('messengerChat') }}></p>
+          <p
+            className="text-sm font-semibold text-gray-800"
+            dangerouslySetInnerHTML={{ __html: t("messengerChat") }}
+          ></p>
         </a>
       </div>
     </div>
