@@ -1,8 +1,8 @@
 "use client";
 
-import useAnalytics from "../ultilities/analystic";
-import LanguageSwitcher from "../components/LanguageSwitcher";
-import { useLanguage } from "../context/LanguageContext";
+import useAnalytics from "../../ultilities/analystic";
+import LanguageSwitcher from "../../components/LanguageSwitcher";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function HomePage() {
   // Initialize analytics

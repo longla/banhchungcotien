@@ -13,6 +13,7 @@ body {
 .number {
   font-family: "Lato", sans-serif;
   font-weight: 700;
+  letter-spacing: 0.02em;
 }
 
 h1 {

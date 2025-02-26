@@ -1,6 +1,7 @@
 "use client";
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 type Language = 'vi' | 'en';
 
@@ -10,7 +11,7 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-const translations = {
+export const translations = {
   vi: {
     'title': 'Bánh Chưng Cô Tiên',
     'subtitle': 'Bánh chưng làm tại California chuẩn vị quê nhà 🏡',
@@ -61,8 +62,34 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('vi');
+export const LanguageProvider = ({ children, locale = 'vi' }: { children: ReactNode, locale?: Language }) => {
+  const [language, setLanguageState] = useState<Language>(locale as Language);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const setLanguage = (lang: Language) => {
+    setLanguageState(lang);
+    
+    // Navigate to the new locale path
+    if (pathname) {
+      const segments = pathname.split('/');
+      segments[1] = lang; // Replace the locale segment
+      router.push(segments.join('/'));
+    }
+  };
+
+  // Update language state based on URL
+  useEffect(() => {
+    if (pathname) {
+      const segments = pathname.split('/');
+      if (segments.length > 1) {
+        const urlLocale = segments[1];
+        if ((urlLocale === 'en' || urlLocale === 'vi') && urlLocale !== language) {
+          setLanguageState(urlLocale as Language);
+        }
+      }
+    }
+  }, [pathname, language]);
 
   const t = (key: string): string => {
     return translations[language][key] || key;

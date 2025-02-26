@@ -1,13 +1,17 @@
-import "./globals.css";
-import { LanguageProvider } from "../context/LanguageContext";
+"use client";
 
-export default function RootLayout({
+import "../globals.css";
+import { LanguageProvider } from "../../context/LanguageContext";
+
+export default function LocaleLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: { locale: string };
 }) {
   return (
-    <html lang="vi">
+    <html lang={params.locale}>
       <head>
         <title>
           Bánh Chưng Cô Tiên - Bánh Chưng Tươi Ngon Tại Mỹ - Chuẩn Vị Truyền
@@ -47,7 +51,7 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <LanguageProvider locale="vi">
+        <LanguageProvider locale={params.locale as 'vi' | 'en'}>
           {children}
         </LanguageProvider>
       </body>
