@@ -138,7 +138,7 @@ export default function HomePage() {
           className="image-container max-w-[600px] max-h-[600px] mx-auto my-2"
         >
           <Image
-            src="/huong-dan-dau-xe.webp"
+            src="/huong-dan-dau-xe.AVIF"
             alt="Parking Guide"
             id="guideImage"
             className="cursor-pointer"
