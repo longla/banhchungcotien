@@ -24,8 +24,8 @@ export const translations = {
     callButton: '📞 Gọi Đặt Bánh: <span class="number">657-272-6533</span>',
     orderNote: "Vui lòng gọi đặt bánh trước, pick up only.",
     wholesaleNote: "📦 Nhận bỏ bánh giá sỉ",
-    address: "📍 Địa chỉ: 8128 W Cerritos Ave, Stanton, CA 90680",
-    parkingGuide: "Hướng Dẫn Đậu Xe",
+    address:
+      '📍 Pickup: <span class="font-lato underline">8101 W Cerritos Ave, Stanton, CA 90680</span>',
     messengerChat: "Tư Vấn",
     sizeSmall: "Nhỏ",
     sizeMedium: "Trung",
@@ -56,8 +56,8 @@ export const translations = {
     callButton: '📞 Order Now: <span class="number">657-272-6533</span>',
     orderNote: "Please call to place orders in advance, pick up only.",
     wholesaleNote: "📦 Wholesale orders available",
-    address: "📍 Address: 8128 W Cerritos Ave, Stanton, CA 90680",
-    parkingGuide: "Parking Guide",
+    address:
+      '📍 Pick up: <span class="underline font-lato">8101 W Cerritos Ave, Stanton, CA 90680<span>',
     messengerChat: "Chat",
     sizeSmall: "Small",
     sizeMedium: "Medium",

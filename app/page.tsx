@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useLanguage } from "../context/LanguageContext";
 import useAnalytics from "../ultilities/analystic";
@@ -125,35 +124,12 @@ export default function HomePage() {
       <p className="text-red-600 font-semibold mt-4">{t("orderNote")}</p>
       <p className="text-red-600 font-semibold mt-4">{t("wholesaleNote")}</p>
       <a
-        href="https://www.google.com/maps/search/?api=1&query=8128+W+Cerritos+Ave,+Stanton,+CA+90680"
+        href="https://www.google.com/maps/search/?api=1&query=8101+W+Cerritos+Ave,+Stanton,+CA+90680"
         target="_blank"
-        className="text-lg text-gray-700 my-3 block underline"
+        className="text-lg text-gray-700 my-3 block"
         onClick={findLocationClick}
         dangerouslySetInnerHTML={{ __html: t("address") }}
       ></a>
-      <div>
-        <p className="text-gray-700">{t("parkingGuide")}</p>
-        <div
-          onClick={handleMapImageClick}
-          className="image-container max-w-[600px] max-h-[600px] mx-auto my-2"
-        >
-          <Image
-            src="/huong-dan-dau-xe.AVIF"
-            alt="Parking Guide"
-            id="guideImage"
-            className="cursor-pointer"
-            width={500}
-            priority
-            layout="responsive"
-            height={500}
-          />
-        </div>
-        <div className="px-[4%] mt-6">
-          <ul className="list-disc text-left">
-            {/* Replace with actual content */}
-          </ul>
-        </div>
-      </div>
       <div className="fixed bottom-5 right-5 z-50 flex flex-col items-center space-y-1">
         <a href="https://m.me/61570225125522" target="_blank" rel="noreferrer">
           <div className="relative flex items-center justify-center">
