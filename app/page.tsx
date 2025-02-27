@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import LanguageSwitcher from "../components/LanguageSwitcher";
 import { useLanguage } from "../context/LanguageContext";
 import useAnalytics from "../ultilities/analystic";
@@ -135,10 +136,11 @@ export default function HomePage() {
           <div className="relative flex items-center justify-center">
             <div className="absolute w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 animate-halo"></div>
             <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full shadow-lg flex items-center justify-center hover:scale-110 hover:shadow-2xl transition transform duration-300 ease-in-out">
-              <img
+              <Image
                 src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg"
                 alt="Messenger Icon"
-                className="w-10 h-10"
+                width={30}
+                height={30}
               />
             </div>
           </div>

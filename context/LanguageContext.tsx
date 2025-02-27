@@ -20,7 +20,7 @@ interface LanguageContextType {
 export const translations = {
   vi: {
     title: "Bánh Chưng Cô Tiên",
-    subtitle: "Bánh chưng làm tại California chuẩn vị quê nhà 🏡",
+    subtitle: "Bánh chưng làm tại California chuẩn vị quê nhà",
     callButton: '📞 Gọi Đặt Bánh: <span class="number">657-272-6533</span>',
     orderNote: "Vui lòng gọi đặt bánh trước, pick up only.",
     wholesaleNote: "📦 Nhận bỏ bánh giá sỉ",
