@@ -83,12 +83,12 @@ export default function SharedHomePage() {
       <h1 className="text-2xl font-bold text-gray-800">{t("title")}</h1>
       <LanguageSwitcher />
 
-      <p className="text-xl text-gray-700 mt-4">{t("subtitle")}</p>
+      <p className="text-xl text-gray-700 mt-2">{t("subtitle")}</p>
       <div className="flex gap-1 md:gap-5 flex-wrap justify-center">
         <a
           href="tel:6572726533"
           onClick={handlePhoneClick}
-          className="mt-6 px-6 py-3 text-white font-bold bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600 active:scale-95 active:bg-red-700 shadow-lg"
+          className="mt-4 px-6 py-3 text-white font-bold bg-red-500 rounded-lg text-lg font-medium hover:bg-red-600 active:scale-95 active:bg-red-700 shadow-lg"
           dangerouslySetInnerHTML={{ __html: t("callButton") }}
         ></a>
         <a
@@ -141,7 +141,6 @@ export default function SharedHomePage() {
         ))}
       </div>
       <p className="text-red-600 font-semibold mt-4">{t("orderNote")}</p>
-      <p className="text-red-600 font-semibold mt-4">{t("wholesaleNote")}</p>
       <a
         href="https://www.google.com/maps/search/?api=1&query=8101+W+Cerritos+Ave,+Stanton,+CA+90680"
         target="_blank"
@@ -149,6 +148,7 @@ export default function SharedHomePage() {
         onClick={findLocationClick}
         dangerouslySetInnerHTML={{ __html: t("address") }}
       ></a>
+      <p className="text-red-600 font-semibold mt-4">{t("wholesaleNote")}</p>
       <div className="fixed bottom-5 right-5 z-50 flex flex-col items-center space-y-1">
         <a href="https://m.me/61570225125522" target="_blank" rel="noreferrer">
           <div className="relative flex items-center justify-center">
