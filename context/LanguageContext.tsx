@@ -22,6 +22,7 @@ export const translations = {
     title: "Bánh Chưng Cô Tiên",
     subtitle: "Bánh chưng làm tại California chuẩn vị quê nhà",
     callButton: '📞 Gọi Đặt Bánh: <span class="number">657-272-6533</span>',
+    buyButton: "🛒 Mua qua Facebook Marketplace",
     orderNote: "Vui lòng gọi đặt bánh trước, pick up only.",
     wholesaleNote: "📦 Nhận bỏ bánh giá sỉ",
     address:
@@ -54,6 +55,7 @@ export const translations = {
     title: "Banh Chung Co Tien",
     subtitle: "Authentic Vietnamese chung cakes made in California 🏡",
     callButton: '📞 Order Now: <span class="number">657-272-6533</span>',
+    buyButton: "🛒 Buy on Facebook Marketplace",
     orderNote: "Please call to place orders in advance, pick up only.",
     wholesaleNote: "📦 Wholesale orders available",
     address:
