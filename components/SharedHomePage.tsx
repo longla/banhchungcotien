@@ -79,7 +79,7 @@ export default function SharedHomePage() {
   };
 
   return (
-    <div className="bg-gray-100 text-center p-[4%] relative">
+    <div>
       <h1 className="text-2xl font-bold text-gray-800">{t("title")}</h1>
       <LanguageSwitcher />
 

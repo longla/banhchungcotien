@@ -93,7 +93,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="bg-gray-100 text-center px-[4%] relative">
         <LanguageProvider locale={locale as "vi" | "en"}>
           {children}
         </LanguageProvider>
