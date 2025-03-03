@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: "https://banhchungcotien.com",
+  siteUrl: "https://www.banhchungcotien.com",
   generateRobotsTxt: true,
   changefreq: "monthly",
   priority: 0.8, // Default priority for all pages

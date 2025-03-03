@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://banhchungcotien.com
+Host: https://www.banhchungcotien.com
 
 # Sitemaps
-Sitemap: https://banhchungcotien.com/sitemap.xml
+Sitemap: https://www.banhchungcotien.com/sitemap.xml
